@@ -85,10 +85,10 @@ mul # # var
 div # # var
 mod # # var
     @ comparisons
-gth # # var     @ greater than
-lth # # var     @ less than
-geq # # var     @ greater than or equal to
-leq # # var     @ less than or equal to
+gth # # var         @ greater than
+lth # # var         @ less than
+geq # # var         @ greater than or equal to
+leq # # var         @ less than or equal to
 
 @ binary general operations
 eq val val var      @ equality check (type-crytical)
@@ -98,15 +98,17 @@ neq val val var     @ inequality check (type-crytical)
 ini var             @ input integer (type-crytical)
 ins var             @ input string (type-crytical)
 out val             @ output value (type-blind)
+outl val            @ equivalent to out val + nl
+nl                  @ print newline
 
 @ string operations
 con val val var     @ concatenate two values as strings (type-blind)
 sti $ var           @ string-to-integer conversion
 
 @ boolean operations
-not val var
-and val val var
-or val val var
+not val var         @ unary logical not
+and val val var     @ binary logical and
+or val val var      @ binary logical or
 
 @ labels
 jump_location:
