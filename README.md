@@ -1,6 +1,7 @@
 # Jerry
 
-Jerry is not as smart as Rick or Beth, however, it can explain what those two are all about... Take a look!
+Jerry is not as smart as Rick or Beth, however, he can explain what those two
+are all about... Take a look!
 
 
 
@@ -18,7 +19,7 @@ SmallO consists of multiple different programs, each with its own mission.
 
 - [Beth] can run your programs written in SmallO assembly and its only
 dependency is Python3 standard library;
-- [Morty] is a snappy and lightweight assembler written in Python;
+- [Morty] is a snappy and lightweight assembler written in Python3;
 - [Rick] is a reliable and ultra-fast VM that executes bytecode produced by
 *Morty*.
 
