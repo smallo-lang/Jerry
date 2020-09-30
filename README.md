@@ -117,17 +117,17 @@ jump_location:
 >"func.so"
 
 @ control flow
-jump *      @ unconditional jump
-jmpt var *  @ jump if val is true (type-blind)
-jmpf var *  @ jump if val is false (type-blind)
+jump *              @ unconditional jump
+jmpt var *          @ jump if val is true (type-blind)
+jmpf var *          @ jump if val is false (type-blind)
 
-br *        @ unconditional branch (like jump but jump location saved)
-brt var *   @ branch if val is true (type-blind)
-brf var *   @ branch if val is false (type-blind)
-back        @ return to previous branch point
+br *                @ unconditional branch (like jump but jump location saved)
+brt var *           @ branch if val is true (type-blind)
+brf var *           @ branch if val is false (type-blind)
+back                @ return to previous branch point
 
-err val #   @ exit program with error message (type-blind) and exit code int
-end         @ exit program
+err $ #             @ exit program with error message and exit code int
+end                 @ exit program
 ```
 
 #### Symbol Map
