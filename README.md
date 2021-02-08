@@ -5,6 +5,44 @@ are all about... Take a look!
 
 
 
+## Redesign Proposal
+
+As of now, SmallO is incapable of any sort of iterative behaviour because it does
+not support composite data structures of any kind. It would be possible to copy
+the way real computers work with memory through a system of addresses, but this
+approach requires a lot of work.
+
+I think that the best way to integrate iteration into SmallO is by using stack
+variables. Something like this:
+
+```smallo
+bin_add:
+  add a a a     @ pops two numbers from `a`, adds them, and
+                @ stores result back in `a` using `push`
+  back
+
+  put 5 a       @ `a` is a variable implemented as a stack
+  put 37 a      @ thus, you can push multiple values onto it
+
+fold_add:
+  len a l
+  gth l 1 b 
+  jmpf b result @ show result if we've gotten to 1 element
+  br b bin_add  @ call `bin_add` if `a` has more than one element
+   
+result:
+  empty a b
+  jmpt b error
+  out "The sum is: "
+  outl a
+  end
+
+error:
+  err "'a' is empty -- can't show result" 1
+```
+
+
+
 ## Basics
 
 For the time being, SmallO is an assembly-like language that runs in a VM. It
